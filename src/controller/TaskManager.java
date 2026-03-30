@@ -28,8 +28,13 @@ public class TaskManager {
   }
 
   
-  public void concluirTarrefa(Tarrefa tarrefa){
-    tarrefa.setConcluida(true);
+  
+  public void concluirTarrefa(String titulo){
+    for (Tarrefa tarrefa : tarrefas) {
+      if (tarrefa.getTitulo().equals(titulo)) {
+        tarrefa.setConcluida(true);
+      }
+    }
   }
 
   public void listarTarrefa(){
